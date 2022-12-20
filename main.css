@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: 15px auto;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 2px solid #000000;
+    font-size: 18px;
+}
+
+form input:focus {
+    border-color: #4567df;
+}
+
+form button {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: #4567df;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: #000000;
+}
+
+#error-message {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.valid {
+    background-color: rgb(53, 232, 92);
+}
+
+.invalid {
+    background-color: rgb(255, 119, 119);
+}
