@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
-    <title>Validar</title>
 </head>
 <body>
     <div class="container">
-        <main>
-            <section>
-                <form id="form">
-                    <input type="number" id="numeroA" placeholder="Digite o 1º valor" autofocus>
-                    <input type="number" id="numeroB" placeholder="Digite o 2º valor">
-                    <button type="submit">Validar</button>
-                </form>
-            </section>
-            <section id="error-message">
-            </section>
-        </main>
+        <h1>Lista de tarefas</h1>
+        <form>
+            <input type="text" id="tarefa" required placeholder="Digite uma nova tarefa">
+            <button type="submit">Adicionar</button>
+        </form>
+        <ol>
+        </ol>
     </div>
-    <script src="./main.js"></script>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="./main.js"></script>
 </html>

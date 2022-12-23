@@ -1,57 +1,76 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #dadada;
 }
 
 .container {
-    max-width: 500px;
+
+    max-width: 700px;
     width: 100%;
-    margin: 15px auto;
+    margin: 0 auto;
+    background-color: white;
+}
+
+form {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 24px 0 16px 0;
 }
 
 form input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    outline: none;
-    border: 2px solid #000000;
-    font-size: 18px;
+    max-width: 250px;
+    border: 1px solid black;
+    transition: border ease .5s;
 }
 
 form input:focus {
-    border-color: #4567df;
+    border-left: 5px solid black;
 }
 
 form button {
-    width: 100%;
-    border: none;
-    padding: 10px;
-    background-color: #4567df;
+    cursor: pointer;
     color: white;
-    font-size: 18px;
+    font-size: 10px;
     font-weight: bold;
-    text-transform: uppercase;
+    background-color: black;
+    border: 2px solid black;
+    margin-left: 8px;
+    transition: all ease 1s;
 }
 
 form button:hover {
-    cursor: pointer;
-    background-color: #000000;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
-#error-message {
-    margin-top: 10px;
-    padding: 10px;
+form input,
+form button {
+    padding: 6px;
+    outline: none;
+}
+
+ol {
     text-align: center;
-    font-size: 14px;
-    cursor: pointer;
+    padding: 16px 0 24px 0;
 }
 
-.valid {
-    background-color: rgb(53, 232, 92);
+ol li:hover {
+    color: red;
 }
 
-.invalid {
-    background-color: rgb(255, 119, 119);
+ol li {
+    cursor: crosshair;
 }
