@@ -1,0 +1,81 @@
+@use 'config/reset.scss';
+@use 'config/variaveis.scss';
+@use 'config/mixins.scss';
+
+body {
+  background-color: variaveis.$corDoFundo;
+
+  li {
+    list-style: none;
+  }
+  
+  .container {
+    max-width: 1024px;
+    @include mixins.width-100;
+    margin: 0 auto;
+  }
+
+  header  {
+    background-color: variaveis.$corDoHeader;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .menu {
+      display: flex;
+      
+      li {
+        font-weight: bold;
+        margin-left: 24px;
+
+        a {
+          color: variaveis.$corDosLinks;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  section {
+    padding: 56px 0;
+
+    .products {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 32.66%);
+      column-gap: 1%;
+      row-gap: 4%;
+      @include mixins.width-100;
+
+      .product-item {
+
+        .product-button {
+          display: block;
+          background-color: variaveis.$fundoDosLinks;
+          color: variaveis.$corDosLinks;
+          text-align: center;
+          padding: 8px 0;
+          @include mixins.borderRadius(8px);
+          margin-top: 8px;
+          text-decoration: none;
+
+          &:hover {
+            background-color: variaveis.$fundoDosLinksHover;
+          }
+        }
+
+        img {
+          @include mixins.width-100;
+          @include mixins.borderRadius(16px);
+        }
+      }
+    }
+  }
+}

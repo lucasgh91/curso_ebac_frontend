@@ -1,0 +1,7 @@
+@mixin width-100 {
+  width: 100%;
+}
+
+@mixin borderRadius($tamanho: 0) {
+  border-radius: $tamanho;
+}
