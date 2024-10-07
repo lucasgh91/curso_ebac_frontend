@@ -1,0 +1,6 @@
+@use 'config/reset.scss';
+@use 'config/variaveis.scss';
+
+body {
+  background-color: variaveis.$corPrincipal;
+}
