@@ -10,7 +10,7 @@ describe('Testa as funcionalidades da aplicação "Agenda de Contatos"', () => {
         cy.get('input[type="email"]').type('meu@email.com')
         cy.get('input[type="tel"]').type('48 99999-9999')
         cy.get('button[type="submit"]').click()
-        cy.contains('João da Silva')
+        cy.get('.contato').contains('João da Silva')
     })
 
     it('Teste de alteração', () => {
@@ -24,7 +24,9 @@ describe('Testa as funcionalidades da aplicação "Agenda de Contatos"', () => {
 
     it('Teste de exclusão', () => {
         cy.get('.contato').should("have.length.at.least", 1)
-        cy.get('button[class="delete"]', {timeout: 2000}).click({multiple: true})
+        cy.get('button[class="delete"]').each((_, index) => {
+            cy.get('button[class="delete"').eq(index).click()
+        })
         cy.get('.contato').should("have.length", 0)
     })
 })
